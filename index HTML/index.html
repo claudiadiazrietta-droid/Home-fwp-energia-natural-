@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FWP Distribuidor Autorizado Chile - Inicio</title>
+    <meta name="description" content="Distribuidor autorizado de productos FWP en Chile. Encuentra Renova+, 24Burn y E-Boost para potenciar tu bienestar y belleza interior.">
+    <meta name="keywords" content="FWP, Renova Plus, 24Burn, E-Boost, suplementos, bienestar, Chile">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        /* Estilo base para el cuerpo del documento */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Color de fondo Slate 50 */
+        }
+        /* Animación suave para las transiciones */
+        .transition-all {
+            transition: all 0.3s ease-in-out;
+        }
+        /* Estilo para los degradados de los botones */
+        .gradient-renova {
+            background-image: linear-gradient(to right, #ec4899, #db2777);
+        }
+        .gradient-burn {
+            background-image: linear-gradient(to right, #a3e635, #84cc16);
+        }
+        .gradient-eboost {
+            background-image: linear-gradient(to right, #fb923c, #f97316);
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <!-- Header y Menú de Navegación -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="text-2xl font-bold text-slate-800">
+                FWP<span class="text-pink-600">Chile</span>
+            </a>
+            
+            <!-- Menú para Desktop -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#" class="text-slate-600 hover:text-pink-600 transition-colors">Inicio</a>
+                <a href="#" class="text-slate-600 hover:text-pink-600 transition-colors">Productos</a>
+                <a href="#" class="text-slate-600 hover:text-pink-600 transition-colors">Sobre Nosotros</a>
+                <a href="#" class="text-slate-600 hover:text-pink-600 transition-colors">Contacto</a>
+            </div>
+
+            <!-- Botón del Menú Hamburguesa para Móvil -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-slate-800 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Menú desplegable para Móvil -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-4">
+            <a href="#" class="block text-center py-2 px-4 text-sm text-slate-600 hover:bg-pink-50">Inicio</a>
+            <a href="#" class="block text-center py-2 px-4 text-sm text-slate-600 hover:bg-pink-50">Productos</a>
+            <a href="#" class="block text-center py-2 px-4 text-sm text-slate-600 hover:bg-pink-50">Sobre Nosotros</a>
+            <a href="#" class="block text-center py-2 px-4 text-sm text-slate-600 hover:bg-pink-50">Contacto</a>
+        </div>
+    </header>
+
+    <!-- Sección Principal -->
+    <main class="container mx-auto px-6 py-12 md:py-20">
+        <!-- Título de la sección -->
+        <section class="text-center">
+            <h1 class="text-4xl md:text-5xl font-black tracking-tight">Potencia tu Bienestar Interior</h1>
+            <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-600">Descubre nuestra selección de suplementos premium diseñados para ayudarte a sentir y verte mejor cada día.</p>
+        </section>
+
+        <!-- Grid de Productos -->
+        <section class="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            
+            <!-- Producto 1: Renova+ -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col items-center p-8 text-center transition-all hover:shadow-2xl hover:-translate-y-2">
+                <img src="renova-plus.png" alt="Suplemento Renova+ con colágeno" class="w-64 h-64 object-contain">
+                <h3 class="mt-6 text-2xl font-bold text-pink-600">RENÖVA+</h3>
+                <p class="mt-2 text-slate-500">Dosis Diaria de Juventud</p>
+                <a href="https://fwpenergianatural.netlify.app/renova" class="mt-6 inline-block gradient-renova text-white font-bold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    Ver más
+                </a>
+            </div>
+
+            <!-- Producto 2: 24Burn -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col items-center p-8 text-center transition-all hover:shadow-2xl hover:-translate-y-2">
+                <img src="24burn.jpg" alt="Suplemento 24Burn para activar el metabolismo" class="w-64 h-64 object-contain">
+                <h3 class="mt-6 text-2xl font-bold text-lime-600">24BURN</h3>
+                <p class="mt-2 text-slate-500">Reduce y Activa Todos los Días</p>
+                <a href="#" class="mt-6 inline-block gradient-burn text-white font-bold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    Ver más
+                </a>
+            </div>
+
+            <!-- Producto 3: E-Boost -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col items-center p-8 text-center transition-all hover:shadow-2xl hover:-translate-y-2">
+                <img src="eboost.png" alt="Bebida energética E-Boost" class="w-64 h-64 object-contain">
+                <h3 class="mt-6 text-2xl font-bold text-orange-600">E-BOOST</h3>
+                <p class="mt-2 text-slate-500">El Impulso para tu Día</p>
+                <a href="#" class="mt-6 inline-block gradient-eboost text-white font-bold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    Ver más
+                </a>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white mt-12 md:mt-20 border-t border-slate-200">
+        <div class="container mx-auto px-6 py-8 text-center text-slate-500">
+            <p>&copy; 2025 FWP Distribuidor Autorizado Chile. Todos los derechos reservados.</p>
+            <p class="text-sm mt-2">Los suplementos no deben utilizarse como sustitutos de una dieta equilibrada.</p>
+        </div>
+    </footer>
+
+    <!-- Script para el menú móvil -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

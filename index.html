@@ -96,12 +96,15 @@
         }
         .scroller {
             max-width: 1200px;
+            overflow: hidden;
+            -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+            mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
         }
         .scroller__inner {
             display: flex;
             flex-wrap: nowrap;
             gap: 1rem;
-            animation: scroll 40s linear infinite;
+            animation: scroll 20s linear infinite;
         }
         .scroller[data-animated="true"]:hover .scroller__inner {
             animation-play-state: paused;
@@ -188,7 +191,7 @@
             <div class="grid md:grid-cols-2 gap-12 items-start">
                 <!-- Columna de la galería -->
                 <div>
-                    <img id="main-product-image" src="renovaproductosolo.png" alt="Envase de Renova+ Colágeno Premium" class="rounded-lg shadow-2xl w-full mb-4">
+                    <img id="main-product-image" src="https://placehold.co/600x600/f3e8f0/7c3aed?text=Renova%2B" alt="Envase de Renova+ Colágeno Premium" class="rounded-lg shadow-2xl w-full mb-4">
                 </div>
                 <!-- Columna de texto -->
                 <div class="text-gray-700">
@@ -266,10 +269,10 @@
                 <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
                     <p class="text-gray-700">"Era escéptica, pero Renova+ superó mis expectativas. Mi pelo tiene más brillo y siento mis articulaciones mucho mejor después de entrenar. El sabor a berries es delicioso."</p>
                     <div class="flex items-center mt-4">
-                        <img src="camirenova.jpg" class="rounded-full w-12 h-12 object-cover" alt="Foto de clienta satisfecha">
+                        <img src="https://placehold.co/50x50/e9d5ff/7c3aed?text=M" class="rounded-full w-12 h-12 object-cover" alt="Foto de clienta satisfecha">
                         <div class="ml-4">
-                            <p class="font-bold">Camila P.</p>
-                            <p class="text-sm text-gray-600">Coquimbo, Chile</p>
+                            <p class="font-bold">Mariana P.</p>
+                            <p class="text-sm text-gray-600">Viña del Mar, Chile</p>
                         </div>
                     </div>
                 </div>

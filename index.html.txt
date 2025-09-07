@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Metatags for SEO in Chile -->
+    <title>24Burn Chile | Activa tu Metabolismo y Quema Grasa Día y Noche</title>
+    <meta name="description" content="Descubre 24Burn de FWP, la fórmula dual que acelera tu metabolismo, controla el apetito y te da energía. ¡Compra hoy con envío gratis en todo Chile y empieza a ver resultados!">
+    <meta name="keywords" content="quemador de grasa, 24Burn, FWP, bajar de peso, metabolismo, energía, suplementos, bienestar, Chile, Santiago">
+    <meta name="author" content="Súper Online Chile - Claudia Díaz">
+    <link rel="canonical" href="https://www.superonlinechile.cl/24burn"> <!-- Cambiar a tu URL final -->
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.superonlinechile.cl/24burn"> <!-- Cambiar a tu URL final -->
+    <meta property="og:title" content="24Burn Chile | Tu Aliado 24/7 para la Quema de Grasa">
+    <meta property="og:description" content="No es solo un quemador, es un sistema inteligente que trabaja con tu cuerpo día y noche para ayudarte a alcanzar tus metas. ¡Activa tu potencial!">
+    <meta property="og:image" content="https://placehold.co/1200x630/e2f5d0/4d7c0f?text=24Burn">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.superonlinechile.cl/24burn"> <!-- Cambiar a tu URL final -->
+    <meta property="twitter:title" content="24Burn Chile | Tu Aliado 24/7 para la Quema de Grasa">
+    <meta property="twitter:description" content="No es solo un quemador, es un sistema inteligente que trabaja con tu cuerpo día y noche para ayudarte a alcanzar tus metas. ¡Activa tu potencial!">
+    <meta property="twitter:image" content="https://placehold.co/1200x630/e2f5d0/4d7c0f?text=24Burn">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://placehold.co/32x32/84cc16/ffffff?text=24B" type="image/png">
+
+    <!-- Tailwind CSS y Google Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #f7fee7 0%, #dcfce7 100%);
+        }
+        .text-gradient {
+            background-image: linear-gradient(45deg, #84cc16, #4d7c0f);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .cta-button {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px 0 rgba(101, 163, 13, 0.3);
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px 0 rgba(101, 163, 13, 0.4);
+        }
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #fff;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+        .plan-card {
+            transition: all 0.3s ease;
+        }
+        .plan-card.popular {
+            transform: scale(1.05);
+            border-color: #84cc16;
+        }
+        .plan-card:not(.popular):hover {
+            transform: translateY(-5px);
+        }
+        .gallery-thumbnail {
+            cursor: pointer;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+            border: 2px solid transparent;
+        }
+        .gallery-thumbnail:hover, .gallery-thumbnail.active {
+            transform: scale(1.05);
+            border-color: #84cc16;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- SECCIÓN HERO -->
+    <header class="gradient-bg">
+        <!-- Banner de Envío Gratis -->
+        <div style="background-color: #65a30d;" class="text-white text-center py-2 font-semibold tracking-wider">
+             ¡ENVIO GRATIS A TODO CHILE!🚚 
+        </div>
+        <div class="container mx-auto px-6 py-16 text-center">
+            <p class="text-sm font-semibold tracking-widest text-lime-600 uppercase mb-4">PARA LA MUJER DECIDIDA A ALCANZAR SUS METAS</p>
+            <h1 class="text-4xl md:text-6xl font-bold text-green-900 leading-tight">
+                Activa tu Metabolismo
+                <span class="text-gradient block">y Quema Grasa Día y Noche</span>
+            </h1>
+            <p class="mt-4 text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">Siente la energía para superar tus límites, controla los antojos y transforma tu cuerpo con una fórmula inteligente que trabaja contigo 24/7.</p>
+            <a href="#planes" class="cta-button inline-block bg-lime-600 text-white font-bold text-lg rounded-lg px-8 py-4 mt-8">VER PLANES DISPONIBLES</a>
+        </div>
+    </header>
+
+    <!-- SECCIÓN PROBLEMA -->
+    <section class="py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-4">¿Te suena familiar?</h2>
+            <p class="max-w-2xl mx-auto text-gray-600 mb-12">A veces, a pesar del esfuerzo, sientes que tu cuerpo no responde como quisieras. No estás sola en esto.</p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-lime-50/50 p-6 rounded-lg shadow-lg">
+                    <span class="text-5xl">😩</span>
+                    <h3 class="font-bold mt-4">Metabolismo Lento</h3>
+                    <p class="text-sm text-gray-600 mt-2">Sientes que por más que te cuidas, esa grasa rebelde simplemente no se va y te falta energía.</p>
+                </div>
+                <div class="bg-lime-50/50 p-6 rounded-lg shadow-lg">
+                    <span class="text-5xl">🥨</span>
+                    <h3 class="font-bold mt-4">Antojos Incontrolables</h3>
+                    <p class="text-sm text-gray-600 mt-2">La ansiedad y los antojos a deshoras aparecen y sabotean todo tu progreso y motivación.</p>
+                </div>
+                <div class="bg-lime-50/50 p-6 rounded-lg shadow-lg">
+                    <span class="text-5xl">😴</span>
+                    <h3 class="font-bold mt-4">Falta de Ganas para Entrenar</h3>
+                    <p class="text-sm text-gray-600 mt-2">Te falta ese impulso de energía para empezar a moverte o para darlo todo en tus rutinas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN BENEFICIOS -->
+    <section class="py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-12">Imagina Alcanzar Tus Metas Sintiéndote Imparable</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="flex flex-col items-center">
+                    <span class="text-5xl">🔥</span>
+                    <h3 class="font-bold mt-4">Acelera el Metabolismo</h3>
+                    <p class="text-sm text-gray-600 mt-1">Promueve la quema de calorías de forma más eficiente, incluso en reposo.</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span class="text-5xl">🍽️</span>
+                    <h3 class="font-bold mt-4">Controla el Apetito</h3>
+                    <p class="text-sm text-gray-600 mt-1">Ayuda a reducir los antojos y la ansiedad, dándote el control de tu alimentación.</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span class="text-5xl">💪</span>
+                    <h3 class="font-bold mt-4">Más Energía y Enfoque</h3>
+                    <p class="text-sm text-gray-600 mt-1">Te da el impulso que necesitas para tus entrenamientos y tu día a día.</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span class="text-5xl">☀️🌙</span>
+                    <h3 class="font-bold mt-4">Fórmula Día y Noche</h3>
+                    <p class="text-sm text-gray-600 mt-1">Un sistema dual que optimiza la quema de grasa las 24 horas del día.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN GALERÍA DE PRODUCTO -->
+    <section id="producto" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Conoce 24Burn: Tu Aliado Inteligente</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                <!-- Columna de la galería -->
+                <div>
+                    <img id="24burn-main-image" src="24BURN_CHILE.png" alt="Envase de 24Burn Quemador de Grasa Premium" class="rounded-lg shadow-2xl w-full mb-4">
+                    <div class="flex justify-center space-x-4">
+                        <img src="24BURN_CHILE.png" alt="Thumbnail 1" class="gallery-thumbnail rounded-lg active" onclick="changeImage('24BURN_CHILE.png', this)">
+                        <img src="https://placehold.co/100x100/f0fdf4/84cc16?text=D%C3%8DA" alt="Thumbnail 2" class="gallery-thumbnail rounded-lg" onclick="changeImage('https://placehold.co/600x600/f0fdf4/84cc16?text=C%C3%A1psula+D%C3%ADa', this)">
+                        <img src="https://placehold.co/100x100/f0fdf4/84cc16?text=NOCHE" alt="Thumbnail 3" class="gallery-thumbnail rounded-lg" onclick="changeImage('https://placehold.co/600x600/f0fdf4/84cc16?text=C%C3%A1psula+Noche', this)">
+                    </div>
+                </div>
+                <!-- Columna de texto -->
+                <div class="text-gray-700">
+                    <p class="text-lg mb-6">24Burn no es un quemador de grasa convencional. Es un sistema de doble acción diseñado para trabajar en sincronía con el ritmo natural de tu cuerpo, maximizando los resultados.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i data-lucide="check-circle-2" class="h-6 w-6 text-lime-500 mr-3 mt-1 flex-shrink-0"></i>
+                            <div>
+                                <h3 class="font-bold">Fórmula Dual Inteligente</h3>
+                                <p class="text-gray-600">Cápsulas de <strong>Día</strong> para activar tu metabolismo y darte energía, y cápsulas de <strong>Noche</strong> para promover la quema de grasa mientras descansas, sin alterar tu sueño.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="leaf" class="h-6 w-6 text-lime-500 mr-3 mt-1 flex-shrink-0"></i>
+                            <div>
+                                <h3 class="font-bold">Ingredientes Naturales y Efectivos</h3>
+                                <p class="text-gray-600">Una combinación sinérgica de extractos naturales estudiados por su capacidad para apoyar la pérdida de peso y el control del apetito.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="sparkles" class="h-6 w-6 text-lime-500 mr-3 mt-1 flex-shrink-0"></i>
+                            <div>
+                                <h3 class="font-bold">Apoyo Integral 24 Horas</h3>
+                                <p class="text-gray-600">Diseñado para ser tu compañero constante, optimizando la quema de grasa y los niveles de energía durante todo el día para que te sientas y veas increíble.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SECCIÓN PRUEBA SOCIAL -->
+    <section class="bg-gray-50 py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Mujeres Reales, Resultados Reales</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg border border-gray-200">
+                    <p class="text-gray-700">"¡Realmente funciona! He notado una gran diferencia en mi energía para entrenar y la ropa me queda mucho mejor. Los antojos de la tarde desaparecieron."</p>
+                    <div class="flex items-center mt-4">
+                        <img src="https://placehold.co/50x50/dcfce7/4d7c0f?text=D" class="rounded-full w-12 h-12 object-cover" alt="Foto de clienta satisfecha">
+                        <div class="ml-4">
+                            <p class="font-bold">Daniela F.</p>
+                            <p class="text-sm text-gray-600">Santiago, Chile</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg border border-gray-200">
+                    <p class="text-gray-700">"Lo que más me gusta es que no me da nerviosismo como otros quemadores. Me siento con más energía y he logrado bajar esa grasa rebelde del abdomen."</p>
+                    <div class="flex items-center mt-4">
+                        <img src="https://placehold.co/50x50/dcfce7/4d7c0f?text=S" class="rounded-full w-12 h-12 object-cover" alt="Foto de clienta satisfecha">
+                        <div class="ml-4">
+                            <p class="font-bold">Sofía L.</p>
+                            <p class="text-sm text-gray-600">Viña del Mar, Chile</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg border border-gray-200">
+                     <p class="text-gray-700">"El complemento perfecto para mi rutina de ejercicios y alimentación. Me ayuda a mantenerme enfocada y a ver resultados más rápido. ¡Gracias, Claudia!"</p>
+                    <div class="flex items-center mt-4">
+                        <img src="https://placehold.co/50x50/dcfce7/4d7c0f?text=J" class="rounded-full w-12 h-12 object-cover" alt="Foto de clienta satisfecha">
+                        <div class="ml-4">
+                            <p class="font-bold">Javiera M.</p>
+                            <p class="text-sm text-gray-600">Temuco, Chile</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SECCIÓN PLANES -->
+    <section id="planes" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold">Elige el plan que acelerará tus resultados</h2>
+            <p class="max-w-3xl mx-auto text-gray-600 mt-4 mb-12">La constancia es clave. Comienza hoy tu transformación con el plan que más se ajusta a tus metas.</p>
+            
+            <div class="flex flex-wrap justify-center gap-8">
+                <!-- Plan 1 Mes -->
+                <div class="plan-card bg-white p-8 rounded-2xl shadow-lg border-2 border-transparent w-full max-w-sm">
+                    <h3 class="text-2xl font-bold">Plan 1 Mes</h3>
+                    <p class="text-gray-500 mt-1">Ideal para comenzar</p>
+                    <p class="text-5xl font-bold my-6">$54.990</p>
+                    <p class="font-semibold">1 Caja de 24Burn</p>
+                    <ul class="text-left space-y-3 mt-6 text-gray-700">
+                        <li class="flex items-center"><i data-lucide="check" class="h-5 w-5 text-green-500 mr-2"></i> Envío GRATIS a todo Chile</li>
+                        <li class="flex items-center"><i data-lucide="check" class="h-5 w-5 text-green-500 mr-2"></i> Guía de Alimentación Saludable</li>
+                    </ul>
+                    <a href="#" class="cta-button block bg-lime-600 text-white font-bold text-lg rounded-lg py-3 mt-8 w-full">COMPRAR AHORA</a>
+                </div>
+
+                <!-- Plan 3 Meses (Popular) -->
+                <div class="plan-card popular bg-white p-8 rounded-2xl shadow-2xl border-2 w-full max-w-sm relative">
+                    <span class="absolute top-0 -mt-4 left-1/2 -translate-x-1/2 bg-lime-600 text-white text-sm font-bold px-4 py-1 rounded-full">EL MÁS VENDIDO</span>
+                    <h3 class="text-2xl font-bold">Plan 3 Meses</h3>
+                    <p class="text-lime-600 font-semibold mt-1">Transformación Completa</p>
+                    <p class="text-5xl font-bold my-6">$154.990</p>
+                    <p class="font-semibold">3 Cajas de 24Burn</p>
+                    <ul class="text-left space-y-3 mt-6 text-gray-700">
+                        <li class="flex items-center"><i data-lucide="check" class="h-5 w-5 text-green-500 mr-2"></i> <strong>Ahorra $10.000</strong></li>
+                        <li class="flex items-center"><i data-lucide="check" class="h-5 w-5 text-green-500 mr-2"></i> Envío GRATIS a todo Chile</li>
+                        <li class="flex items-center"><i data-lucide="check" class="h-5 w-5 text-green-500 mr-2"></i> Guía de Alimentación Saludable</li>
+                        <li class="flex items-center"><i data-lucide="check" class="h-5 w-5 text-green-500 mr-2"></i> Acceso Comunidad VIP</li>
+                    </ul>
+                     <a href="#" class="cta-button block bg-green-700 text-white font-bold text-lg rounded-lg py-3 mt-8 w-full">ELEGIR PLAN 3 MESES</a>
+                </div>
+
+                <!-- Plan 2 Meses -->
+                <div class="plan-card bg-white p-8 rounded-2xl shadow-lg border-2 border-transparent w-full max-w-sm">
+                    <h3 class="text-2xl font-bold">Plan 2 Meses</h3>
+                    <p class="text-gray-500 mt-1">Para potenciar resultados</p>
+                    <p class="text-5xl font-bold my-6">$109.980</p>
+                    <p class="font-semibold">2 Cajas de 24Burn</p>
+                    <ul class="text-left space-y-3 mt-6 text-gray-700">
+                        <li class="flex items-center"><i data-lucide="check" class="h-5 w-5 text-green-500 mr-2"></i> Envío GRATIS a todo Chile</li>
+                        <li class="flex items-center"><i data-lucide="check" class="h-5 w-5 text-green-500 mr-2"></i> Guía de Alimentación Saludable</li>
+                    </ul>
+                    <a href="#" class="cta-button block bg-lime-600 text-white font-bold text-lg rounded-lg py-3 mt-8 w-full">COMPRAR AHORA</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <h2 class="text-3xl font-bold text-center mb-12">Preguntas Frecuentes</h2>
+            <div class="space-y-4">
+                <details class="bg-lime-50/50 p-4 rounded-lg shadow-sm group" open>
+                    <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+                        ¿En cuánto tiempo veré resultados?
+                        <i data-lucide="chevron-down" class="h-5 w-5 transition-transform duration-300 group-open:rotate-180"></i>
+                    </summary>
+                    <p class="mt-2 text-gray-600">Los efectos en el aumento de energía se sienten desde los primeros días. Para ver cambios significativos en la composición corporal, recomendamos un uso continuo de al menos 2 a 3 meses, siempre acompañado de una dieta balanceada y actividad física regular.</p>
+                </details>
+                <details class="bg-lime-50/50 p-4 rounded-lg shadow-sm group">
+                    <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+                        ¿Tiene alguna contraindicación?
+                        <i data-lucide="chevron-down" class="h-5 w-5 transition-transform duration-300 group-open:rotate-180"></i>
+                    </summary>
+                    <p class="mt-2 text-gray-600">24Burn contiene estimulantes como la cafeína en su fórmula de día. No es recomendable para personas con sensibilidad a la cafeína, hipertensión, problemas cardíacos, embarazadas o en período de lactancia. Siempre consulta a tu médico antes de comenzar a tomar cualquier suplemento.</p>
+                </details>
+                <details class="bg-lime-50/50 p-4 rounded-lg shadow-sm group">
+                    <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+                        ¿Cómo se toma?
+                        <i data-lucide="chevron-down" class="h-5 w-5 transition-transform duration-300 group-open:rotate-180"></i>
+                    </summary>
+                    <p class="mt-2 text-gray-600">Es muy simple: toma una cápsula de 'DÍA' por la mañana con tu desayuno, y una cápsula de 'NOCHE' 30 minutos antes de la cena con un vaso de agua. Las cápsulas no tienen sabor.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FOOTER -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 FWP Distribuidor autorizado. Todos los derechos reservados.</p>
+            <p class="text-sm mt-2">Diseñado para tus metas.</p>
+            <p class="text-xs mt-4 text-gray-400">Los suplementos alimenticios son una herramienta para complementar tu estilo de vida saludable.</p>
+        </div>
+    </footer>
+
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="https://wa.me/56900000000?text=Hola%20Claudia!%20Tengo%20una%20pregunta%20sobre%2024Burn" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle-code"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path><path d="m10 8-2 4 2 4"></path><path d="m14 8 2 4-2 4"></path></svg>
+    </a>
+
+    <script>
+        lucide.createIcons();
+        function changeImage(newSrc, thumbnail) {
+            // Cambia la imagen principal
+            document.getElementById('24burn-main-image').src = newSrc;
+            
+            // Gestiona la clase 'active' para los thumbnails
+            const thumbnails = document.querySelectorAll('.gallery-thumbnail');
+            thumbnails.forEach(t => t.classList.remove('active'));
+            thumbnail.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
+

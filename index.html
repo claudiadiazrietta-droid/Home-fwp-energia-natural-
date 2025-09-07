@@ -224,18 +224,18 @@
                         this.activeSlide = this.activeSlide === this.slides.length ? 1 : this.activeSlide + 1
                     }, 5000)
                 }
-            }" x-init="loop()" class="relative max-w-sm mx-auto">
+            }" x-init="loop()" class="relative max-w-lg mx-auto">
                 <!-- Slides -->
-                <div class="relative h-[35rem] overflow-hidden rounded-2xl shadow-2xl">
+                <div class="relative h-[45rem] overflow-hidden rounded-2xl shadow-2xl">
                     <template x-for="(slide, index) in slides" :key="index">
                         <div x-show="activeSlide === index + 1" 
                              class="absolute inset-0"
-                             x-transition:enter="transition ease-out duration-1000"
-                             x-transition:enter-start="opacity-0 transform scale-95"
-                             x-transition:enter-end="opacity-100 transform scale-100"
-                             x-transition:leave="transition ease-in duration-1000"
-                             x-transition:leave-start="opacity-100 transform scale-100"
-                             x-transition:leave-end="opacity-0 transform scale-95">
+                             x-transition:enter="transition ease-in-out duration-700"
+                             x-transition:enter-start="transform translate-x-full"
+                             x-transition:enter-end="transform translate-x-0"
+                             x-transition:leave="transition ease-in-out duration-700"
+                             x-transition:leave-start="transform translate-x-0"
+                             x-transition:leave-end="transform -translate-x-full">
                             <img :src="slide.img" class="w-full h-full object-cover" />
                         </div>
                     </template>
@@ -403,3 +403,4 @@
 
 </body>
 </html>
+

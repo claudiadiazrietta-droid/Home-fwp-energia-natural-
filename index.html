@@ -88,6 +88,24 @@
         .plan-card:not(.popular):hover {
             transform: translateY(-5px);
         }
+        
+        /* Estilos para el carrusel de desplazamiento infinito */
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .scroller {
+            max-width: 1200px;
+        }
+        .scroller__inner {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 1rem;
+            animation: scroll 40s linear infinite;
+        }
+        .scroller[data-animated="true"]:hover .scroller__inner {
+            animation-play-state: paused;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -209,53 +227,22 @@
             <h2 class="text-3xl font-bold text-center mb-4 uppercase text-white">Fórmula Natural, Respaldada por Ciencia</h2>
             <p class="text-center text-gray-400 max-w-2xl mx-auto mb-12">Cada componente de Renova+ fue seleccionado por su pureza y potencia. Descubre la ciencia detrás de tu transformación.</p>
 
-            <div x-data="{
-                activeSlide: 1,
-                slides: [
-                    { img: 'renovabiopeptidodecolageno.jpg' },
-                    { img: 'renovamagnesio.jpg' },
-                    { img: 'renovaq10.jpg' },
-                    { img: 'renovaresveratrol.jpg' },
-                    { img: 'renovavitaminac.jpg' },
-                    { img: 'renovazinc.jpg' }
-                ],
-                loop() {
-                    setInterval(() => {
-                        this.activeSlide = this.activeSlide === this.slides.length ? 1 : this.activeSlide + 1
-                    }, 5000)
-                }
-            }" x-init="loop()" class="relative max-w-lg mx-auto">
-                <!-- Slides -->
-                <div class="relative h-[45rem] overflow-hidden rounded-2xl shadow-2xl">
-                    <template x-for="(slide, index) in slides" :key="index">
-                        <div x-show="activeSlide === index + 1" 
-                             class="absolute inset-0"
-                             x-transition:enter="transition ease-in-out duration-700"
-                             x-transition:enter-start="transform translate-x-full"
-                             x-transition:enter-end="transform translate-x-0"
-                             x-transition:leave="transition ease-in-out duration-700"
-                             x-transition:leave-start="transform translate-x-0"
-                             x-transition:leave-end="transform -translate-x-full">
-                            <img :src="slide.img" class="w-full h-full object-cover" />
-                        </div>
-                    </template>
-                </div>
-
-                <!-- Prev/Next Buttons -->
-                <button @click="activeSlide = activeSlide === 1 ? slides.length : activeSlide - 1" class="absolute top-1/2 -translate-y-1/2 -left-4 md:-left-12 bg-white/80 p-2 rounded-full shadow-md text-gray-800 hover:bg-white transition focus:outline-none">
-                    <i data-lucide="chevron-left" class="w-6 h-6"></i>
-                </button>
-                <button @click="activeSlide = activeSlide === slides.length ? 1 : activeSlide + 1" class="absolute top-1/2 -translate-y-1/2 -right-4 md:-right-12 bg-white/80 p-2 rounded-full shadow-md text-gray-800 hover:bg-white transition focus:outline-none">
-                    <i data-lucide="chevron-right" class="w-6 h-6"></i>
-                </button>
-
-                <!-- Dots -->
-                <div class="absolute -bottom-10 left-1/2 -translate-x-1/2 flex space-x-2">
-                    <template x-for="(slide, index) in slides" :key="index">
-                        <button @click="activeSlide = index + 1" 
-                                :class="{'bg-white': activeSlide === index + 1, 'bg-gray-500': activeSlide !== index + 1}" 
-                                class="w-3 h-3 rounded-full hover:bg-gray-200 transition"></button>
-                    </template>
+            <div class="scroller mx-auto" data-animated="true">
+                <div class="scroller__inner">
+                    <!-- Aquí cargas tus 6 imágenes -->
+                    <img src="renovabiopeptidodecolageno.jpg" class="rounded-2xl" alt="Ingrediente 1">
+                    <img src="renovamagnesio.jpg" class="rounded-2xl" alt="Ingrediente 2">
+                    <img src="renovaq10.jpg" class="rounded-2xl" alt="Ingrediente 3">
+                    <img src="renovaresveratrol.jpg" class="rounded-2xl" alt="Ingrediente 4">
+                    <img src="renovavitaminac.jpg" class="rounded-2xl" alt="Ingrediente 5">
+                    <img src="renovazinc.jpg" class="rounded-2xl" alt="Ingrediente 6">
+                    <!-- Se duplican para el efecto infinito -->
+                    <img src="renovabiopeptidodecolageno.jpg" class="rounded-2xl" alt="Ingrediente 1">
+                    <img src="renovamagnesio.jpg" class="rounded-2xl" alt="Ingrediente 2">
+                    <img src="renovaq10.jpg" class="rounded-2xl" alt="Ingrediente 3">
+                    <img src="renovaresveratrol.jpg" class="rounded-2xl" alt="Ingrediente 4">
+                    <img src="renovavitaminac.jpg" class="rounded-2xl" alt="Ingrediente 5">
+                    <img src="renovazinc.jpg" class="rounded-2xl" alt="Ingrediente 6">
                 </div>
             </div>
         </div>

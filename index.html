@@ -87,6 +87,15 @@
         .plan-card:not(.popular):hover {
             transform: translateY(-5px);
         }
+        .gallery-thumbnail {
+            cursor: pointer;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+            border: 2px solid transparent;
+        }
+        .gallery-thumbnail:hover, .gallery-thumbnail.active {
+            transform: scale(1.05);
+            border-color: #a855f7;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -161,13 +170,58 @@
             </div>
         </div>
     </section>
+
+    <!-- SECCIÓN GALERÍA DE PRODUCTO -->
+    <section id="producto" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Conoce Renova+: Tu Ritual de Belleza Interior</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                <!-- Columna de la galería -->
+                <div>
+                    <img id="main-product-image" src="https://placehold.co/600x600/f3e8f0/7c3aed?text=Renova%2B" alt="Envase de Renova+ Colágeno Premium" class="rounded-lg shadow-2xl w-full mb-4">
+                    <div class="flex justify-center space-x-4">
+                        <img src="https://placehold.co/100x100/f3e8f0/7c3aed?text=Renova%2B" alt="Thumbnail 1" class="gallery-thumbnail rounded-lg active" onclick="changeImage('https://placehold.co/600x600/f3e8f0/7c3aed?text=Renova%2B', this)">
+                        <img src="https://placehold.co/100x100/e9d5ff/7c3aed?text=Sabor" alt="Thumbnail 2" class="gallery-thumbnail rounded-lg" onclick="changeImage('https://placehold.co/600x600/e9d5ff/7c3aed?text=Sabor+Berries', this)">
+                        <img src="https://placehold.co/100x100/f3e8f0/7c3aed?text=Polvo" alt="Thumbnail 3" class="gallery-thumbnail rounded-lg" onclick="changeImage('https://placehold.co/600x600/f3e8f0/7c3aed?text=Textura+en+Polvo', this)">
+                    </div>
+                </div>
+                <!-- Columna de texto -->
+                <div class="text-gray-700">
+                    <p class="text-lg mb-6">Renova+ es mucho más que un suplemento, es el primer paso en tu rutina diaria de amor propio. Diseñado con los más altos estándares de calidad para entregarte resultados que puedes ver y sentir.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i data-lucide="check-circle-2" class="h-6 w-6 text-pink-500 mr-3 mt-1 flex-shrink-0"></i>
+                            <div>
+                                <h3 class="font-bold">Fórmula Premium y Completa</h3>
+                                <p class="text-gray-600">Cada dosis contiene Péptidos de Colágeno, Resveratrol, Coenzima Q10 y un mix de vitaminas y minerales esenciales.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="leaf" class="h-6 w-6 text-pink-500 mr-3 mt-1 flex-shrink-0"></i>
+                            <div>
+                                <h3 class="font-bold">Sabor Delicioso y Natural</h3>
+                                <p class="text-gray-600">Disfruta de su refrescante sabor a berries, endulzado naturalmente y fácil de disolver.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="sparkles" class="h-6 w-6 text-pink-500 mr-3 mt-1 flex-shrink-0"></i>
+                            <div>
+                                <h3 class="font-bold">Resultados Visibles</h3>
+                                <p class="text-gray-600">Creado para potenciar tu belleza desde adentro, promoviendo una piel firme, cabello brillante y más energía.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
     
     <!-- SECCIÓN PRUEBA SOCIAL -->
-    <section class="bg-white py-20">
+    <section class="bg-gray-50 py-20">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold text-center mb-12">Mujeres Reales, Resultados Reales</h2>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                <div class="bg-white p-6 rounded-lg border border-gray-200">
                     <p class="text-gray-700">"¡Increíble! En un mes mi piel está mucho más luminosa y mis uñas ya no se rompen. Lo mejor es que tengo más energía durante el día. Lo recomiendo 100%."</p>
                     <div class="flex items-center mt-4">
                         <img src="https://placehold.co/50x50/e9d5ff/7c3aed?text=C" class="rounded-full w-12 h-12 object-cover" alt="Foto de clienta satisfecha">
@@ -177,17 +231,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                <div class="bg-white p-6 rounded-lg border border-gray-200">
                     <p class="text-gray-700">"Era escéptica, pero Renova+ superó mis expectativas. Mi pelo tiene más brillo y siento mis articulaciones mucho mejor después de entrenar. El sabor a berries es delicioso."</p>
                     <div class="flex items-center mt-4">
-                        <img src="camirenova.jpg" class="rounded-full w-12 h-12 object-cover" alt="Foto de clienta satisfecha">
+                        <img src="https://placehold.co/50x50/e9d5ff/7c3aed?text=M" class="rounded-full w-12 h-12 object-cover" alt="Foto de clienta satisfecha">
                         <div class="ml-4">
-                            <p class="font-bold">Camila. P.</p>
+                            <p class="font-bold">Mariana P.</p>
                             <p class="text-sm text-gray-600">Viña del Mar, Chile</p>
                         </div>
                     </div>
                 </div>
-                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                <div class="bg-white p-6 rounded-lg border border-gray-200">
                      <p class="text-gray-700">"Lo compré por recomendación y ha sido la mejor inversión. Se disuelve fácil y se notan los efectos. Mi piel se ve y se siente más hidratada. ¡Gracias, Claudia!"</p>
                     <div class="flex items-center mt-4">
                         <img src="https://placehold.co/50x50/e9d5ff/7c3aed?text=V" class="rounded-full w-12 h-12 object-cover" alt="Foto de clienta satisfecha">
@@ -300,9 +354,17 @@
 
     <script>
         lucide.createIcons();
+        function changeImage(newSrc, thumbnail) {
+            // Cambia la imagen principal
+            document.getElementById('main-product-image').src = newSrc;
+            
+            // Gestiona la clase 'active' para los thumbnails
+            const thumbnails = document.querySelectorAll('.gallery-thumbnail');
+            thumbnails.forEach(t => t.classList.remove('active'));
+            thumbnail.classList.add('active');
+        }
     </script>
 
 </body>
 </html>
-
 

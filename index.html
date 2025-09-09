@@ -142,6 +142,69 @@
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
+
+        /* --- Benefit Card Hover Effect --- */
+        .benefit-card {
+            transition: all 0.3s ease;
+        }
+        .benefit-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(214, 51, 132, 0.5); /* Sombra rosada/magenta */
+        }
+
+        /* --- Ingredient Card Hover Effect --- */
+        .ingredient-card {
+            transition: all 0.3s ease;
+        }
+        .ingredient-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 0, 150, 0.4);
+        }
+
+        /* --- Product Image Hover Effect --- */
+        .product-image-card {
+            transition: all 0.3s ease;
+        }
+        .product-image-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(214, 51, 132, 0.5);
+        }
+
+        /* --- Testimonial Card Hover Effect --- */
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 0, 150, 0.4);
+        }
+
+        /* --- Freedom Card Hover Effect --- */
+        .freedom-card {
+            transition: all 0.3s ease;
+        }
+        .freedom-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(214, 51, 132, 0.5);
+        }
+
+        /* --- Pricing Card Hover Effect --- */
+        .pricing-card {
+            transition: all 0.3s ease;
+        }
+        .pricing-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 0, 150, 0.4);
+        }
+
+        /* --- FAQ Card Hover Effect --- */
+        .faq-card {
+            transition: all 0.3s ease;
+        }
+        .faq-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 0, 150, 0.4);
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -150,13 +213,13 @@
     <div class="scrolling-banner">
         <div class="scrolling-banner-content">
             <span>✨ ENVÍO GRATIS A TODO CHILE ✨</span>
-            <span>OFERTA POR TIEMPO LIMITADO</span>
+            <span>ENVÍO GRATIS A TODO CHILE</span>
             <span>✨ ENVÍO GRATIS A TODO CHILE ✨</span>
-            <span>OFERTA POR TIEMPO LIMITADO</span>
+            <span>ENVÍO GRATIS A TODO CHILE</span>
             <span>✨ ENVÍO GRATIS A TODO CHILE ✨</span>
-            <span>OFERTA POR TIEMPO LIMITADO</span>
+            <span>ENVÍO GRATIS A TODO CHILE</span>
             <span>✨ ENVÍO GRATIS A TODO CHILE ✨</span>
-            <span>OFERTA POR TIEMPO LIMITADO</span>
+            <span>ENVÍO GRATIS A TODO CHILE</span>
         </div>
     </div>
 
@@ -165,18 +228,18 @@
 
         <!-- Hero Section -->
         <header class="text-center mb-16">
-            <p class="text-sm font-semibold uppercase tracking-wider text-grad mb-2">PARA LA MUJER QUE NO PONE SU BIENESTAR EN PAUSA</p>
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-4">
+            <p class="text-lg font-semibold uppercase tracking-wider text-grad mb-4">Un impulso de bienestar para hombres y mujeres reales</p>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-normal">
                 <span class="block" style="color: #4a0e7e;">La Dosis Diaria de Juventud</span>
                 <span class="text-grad block">Que Tu Espejo Amará</span>
             </h1>
             <p class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">Descubre la fórmula premium que está revolucionando el bienestar en Chile. Renova+ no es solo colágeno, es tu dosis diaria de juventud para una piel radiante, cabello de ensueño y energía desbordante.</p>
             <div class="mt-8 flex justify-center">
                  <!-- Product Image -->
-                <img src="renovafwp.jpg" alt="Envase de Colágeno Renova+" class="rounded-lg shadow-2xl w-full max-w-sm">
+                <img src="renovafwp.jpg" alt="Envase de Colágeno Renova+" class="product-image-card rounded-lg shadow-2xl w-full max-w-sm">
             </div>
             <div class="mt-10">
-                <a href="https://wa.me/56900000000?text=Hola%20Claudia%2C%20quiero%20comprar%20Renova%2B%20con%20la%20oferta%20de%20env%C3%ADo%20gratis%21" target="_blank" class="btn-grad font-bold text-2xl py-4 px-10 rounded-full shadow-lg transform hover:scale-105 transition-transform duration-300 inline-block">
+                <a href="https://wa.me/56941687024?text=Hola%20%2C%20quiero%20comprar%20Renova%2B%20con%20la%20oferta%20de%20env%C3%ADo%20gratis%21" target="_blank" class="btn-grad font-bold text-2xl py-4 px-10 rounded-full shadow-lg transform hover:scale-105 transition-transform duration-300 inline-block">
                     ¡QUIERO MI RENOVA+ AHORA!
                 </a>
             </div>
@@ -186,17 +249,17 @@
         <section class="mb-20">
             <h2 class="text-3xl font-bold text-center mb-10">¿Por Qué Renova+ Es La Oferta Que No Puedes Rechazar?</h2>
             <div class="grid md:grid-cols-3 gap-8 text-center">
-                <div class="bg-white/50 p-6 rounded-xl shadow-lg">
+                <div class="benefit-card bg-white/50 p-6 rounded-xl shadow-lg">
                     <div class="text-4xl text-[#d63384] mb-3">🌟</div>
                     <h3 class="text-xl font-semibold mb-2">RESULTADO SOÑADO</h3>
                     <p>Imagina despertar con una piel más firme, un cabello que brilla y una energía que te acompaña todo el día. Eso es lo que Renova+ hace por ti.</p>
                 </div>
-                <div class="bg-white/50 p-6 rounded-xl shadow-lg">
+                <div class="benefit-card bg-white/50 p-6 rounded-xl shadow-lg">
                     <div class="text-4xl text-[#d63384] mb-3">✅</div>
                     <h3 class="text-xl font-semibold mb-2">PROBABILIDAD DE LOGRO</h3>
                     <p>Con Biopéptidos Activos de colágeno de máxima absorción y una fórmula única, los resultados no son una promesa, son una garantía.</p>
                 </div>
-                <div class="bg-white/50 p-6 rounded-xl shadow-lg">
+                <div class="benefit-card bg-white/50 p-6 rounded-xl shadow-lg">
                      <div class="text-4xl text-[#d63384] mb-3">⏱️</div>
                     <h3 class="text-xl font-semibold mb-2">TIEMPO Y ESFUERZO</h3>
                     <p>Olvídate de rutinas complicadas. Una sola cucharada al día es todo lo que necesitas para iniciar tu transformación. ¡Más fácil, imposible!</p>
@@ -209,37 +272,37 @@
             <h2 class="text-3xl font-bold text-center mb-10">La Fórmula Secreta de Tu Juventud</h2>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
                 <!-- Ingrediente 1 -->
-                <div class="reveal-card text-center bg-white p-4 rounded-xl shadow-md transform hover:-translate-y-2 transition-transform duration-300">
+                <div class="reveal-card ingredient-card text-center bg-white p-4 rounded-xl shadow-md">
                     <div class="text-5xl mb-3">🧬</div>
                     <h4 class="font-bold">Biopéptidos de Colágeno</h4>
                     <p class="text-sm">La base para una piel firme y elástica.</p>
                 </div>
                 <!-- Ingrediente 2 -->
-                <div class="reveal-card text-center bg-white p-4 rounded-xl shadow-md transform hover:-translate-y-2 transition-transform duration-300">
+                <div class="reveal-card ingredient-card text-center bg-white p-4 rounded-xl shadow-md">
                     <div class="text-5xl mb-3">⚡</div>
                     <h4 class="font-bold">Magnesio</h4>
                     <p class="text-sm">Energía y bienestar para tus músculos.</p>
                 </div>
                 <!-- Ingrediente 3 -->
-                <div class="reveal-card text-center bg-white p-4 rounded-xl shadow-md transform hover:-translate-y-2 transition-transform duration-300">
+                <div class="reveal-card ingredient-card text-center bg-white p-4 rounded-xl shadow-md">
                     <div class="text-5xl mb-3">🍇</div>
                     <h4 class="font-bold">Resveratrol</h4>
                     <p class="text-sm">Potente antioxidante que protege tus células.</p>
                 </div>
                 <!-- Ingrediente 4 -->
-                <div class="reveal-card text-center bg-white p-4 rounded-xl shadow-md transform hover:-translate-y-2 transition-transform duration-300">
+                <div class="reveal-card ingredient-card text-center bg-white p-4 rounded-xl shadow-md">
                     <div class="text-5xl mb-3">🔋</div>
                     <h4 class="font-bold">Coenzima Q10</h4>
                     <p class="text-sm">Vitalidad y juventud para tu piel.</p>
                 </div>
                 <!-- Ingrediente 5 -->
-                <div class="reveal-card text-center bg-white p-4 rounded-xl shadow-md transform hover:-translate-y-2 transition-transform duration-300">
+                <div class="reveal-card ingredient-card text-center bg-white p-4 rounded-xl shadow-md">
                     <div class="text-5xl mb-3">🍊</div>
                     <h4 class="font-bold">Vitamina C</h4>
                     <p class="text-sm">Fortalece tu sistema inmune y potencia el colágeno.</p>
                 </div>
                 <!-- Ingrediente 6 -->
-                <div class="reveal-card text-center bg-white p-4 rounded-xl shadow-md transform hover:-translate-y-2 transition-transform duration-300">
+                <div class="reveal-card ingredient-card text-center bg-white p-4 rounded-xl shadow-md">
                     <div class="text-5xl mb-3">🛡️</div>
                     <h4 class="font-bold">Zinc</h4>
                     <p class="text-sm">Esencial para un cabello y uñas fuertes.</p>
@@ -252,28 +315,28 @@
             <h2 class="text-3xl font-bold text-center mb-10">No Solo Lo Decimos Nosotros... ¡Ellas Ya Lo Viven!</h2>
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Testimonio 1 -->
-                <div class="reveal-card bg-white p-6 rounded-xl shadow-lg">
-                    <img src="https://placehold.co/100x100/e8d5e6/3f1a3a?text=Claudia" alt="Testimonio de Claudia D." class="w-24 h-24 rounded-full mx-auto -mt-12 border-4 border-white">
+                <div class="reveal-card testimonial-card bg-white p-6 rounded-xl shadow-lg">
+                    <img src="franrenova.jpg" alt="Testimonio de Claudia D." class="w-24 h-24 rounded-full mx-auto -mt-12 border-4 border-white">
                     <p class="text-gray-600 mt-4">"Llevo un mes tomando Renova+ y mis amigas no paran de preguntarme qué me hice en la cara. ¡Mi piel está luminosa y mucho más tersa! Realmente increíble."</p>
-                    <p class="text-right font-bold mt-4">- Claudia D., 42, Santiago</p>
+                    <p class="text-right font-bold mt-4">- Francisca., 35, Santiago</p>
                 </div>
                  <!-- Testimonio 2 -->
-                <div class="reveal-card bg-white p-6 rounded-xl shadow-lg">
-                    <img src="https://placehold.co/100x100/e8d5e6/3f1a3a?text=Javiera" alt="Testimonio de Javiera M." class="w-24 h-24 rounded-full mx-auto -mt-12 border-4 border-white">
-                    <p class="text-gray-600 mt-4">"Siempre he tenido molestias en las articulaciones al hacer ejercicio. Desde que empecé con RENÖVA+ me siento con más movilidad y menos rigidez. Ahora disfruto mis entrenamientos sin dolor!"</p>
-                    <p class="text-right font-bold mt-4">- Camila P. 33, Coquimbo</p>
+                <div class="reveal-card testimonial-card bg-white p-6 rounded-xl shadow-lg">
+                    <img src="camirenova.jpg" alt="Testimonio de Javiera M." class="w-24 h-24 rounded-full mx-auto -mt-12 border-4 border-white">
+                    <p class="text-gray-600 mt-4">"Mi pelo estaba súper débil y se me caía mucho. Desde que tomo Renova+, está más fuerte y brillante que nunca. ¡Lo recomiendo a ojos cerrados!"</p>
+                    <p class="text-right font-bold mt-4">- Camila P., 33, Coquimbo</p>
                 </div>
                  <!-- Testimonio 3 -->
-                <div class="reveal-card bg-white p-6 rounded-xl shadow-lg">
-                    <img src="https://placehold.co/100x100/e8d5e6/3f1a3a?text=Isidora" alt="Testimonio de Isidora P." class="w-24 h-24 rounded-full mx-auto -mt-12 border-4 border-white">
-                    <p class="text-gray-600 mt-4">"Tengo más de 50 y sentía el cansancio del día a día. Con Renova+ recuperé mi energía y hasta mis rodillas se sienten mejor. Es mi ritual de cada mañana."</p>
-                    <p class="text-right font-bold mt-4">- Isidora P., 51, Concepción</p>
+                <div class="reveal-card testimonial-card bg-white p-6 rounded-xl shadow-lg">
+                    <img src="jennirenova.jpg" alt="Testimonio de Isidora P." class="w-24 h-24 rounded-full mx-auto -mt-12 border-4 border-white">
+                    <p class="text-gray-600 mt-4">" sentía el cansancio del día a día. Con Renova+ recuperé mi energía y hasta mis rodillas se sienten mejor. Es mi ritual de cada mañana."</p>
+                    <p class="text-right font-bold mt-4">- Jennifer V., 40, Concepción</p>
                 </div>
             </div>
         </section>
         
         <!-- Roadmap to Freedom Section -->
-        <section class="text-center bg-white/60 p-10 rounded-xl shadow-xl my-20">
+        <section class="freedom-card text-center bg-white/60 p-10 rounded-xl shadow-xl my-20">
             <h2 class="text-3xl md:text-4xl font-extrabold mb-4" style="color: #4a0e7e;">Tu Camino a la Libertad</h2>
             <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-12">Renova+ no es solo un producto increíble, es la puerta de entrada para construir tu propio negocio y alcanzar la independencia que deseas.</p>
             
@@ -310,7 +373,7 @@
             </div>
 
             <div class="mt-16">
-                <a href="https://wa.me/56900000000?text=Hola%20Claudia%2C%20me%20interesa%20saber%20m%C3%A1s%20sobre%20c%C3%B3mo%20ser%20Embajadora%20FWP." target="_blank" class="btn-grad font-bold text-xl py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-transform duration-300 inline-block">
+                <a href="https://wa.me/56941687024?text=Hola%20%2C%20me%20interesa%20saber%20m%C3%A1s%20sobre%20c%C3%B3mo%20ser%20Embajadora%20FWP." target="_blank" class="btn-grad font-bold text-xl py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-transform duration-300 inline-block">
                     QUIERO SER EMBAJADORA
                 </a>
             </div>
@@ -325,18 +388,18 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
                 <!-- Pack 1 -->
-                <div class="bg-gray-800 text-white rounded-xl p-6 md:p-8 flex flex-col shadow-lg border-2 border-transparent">
+                <div class="pricing-card bg-gray-800 text-white rounded-xl p-6 md:p-8 flex flex-col shadow-lg border-2 border-transparent">
                     <h3 class="text-2xl font-bold text-center mb-4">Pack Inicio</h3>
                     <img src="renova1.jpg.png" alt="Pack Inicio Renova+ 1 mes" class="rounded-lg my-4 object-contain h-48 w-full">
                     <p class="text-4xl md:text-5xl font-bold text-center my-4">$54.990</p>
                     <p class="text-center text-gray-400 mb-6">Envío incluido</p>
-                    <a href="https://wa.me/56900000000?text=Hola%2C%20quiero%20comprar%20el%20Pack%20Inicio%20de%20Renova%2B" target="_blank" class="mt-auto w-full text-center bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300">
+                    <a href="https://wa.me/56941687024?text=Hola%2C%20quiero%20comprar%20el%20Pack%20Inicio%20de%20Renova%2B" target="_blank" class="mt-auto w-full text-center bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300">
                         COMPRAR 1 UNIDAD
                     </a>
                 </div>
 
                 <!-- Pack 3 (Most Popular) -->
-                <div class="bg-gray-800 text-white rounded-xl p-6 md:p-8 flex flex-col shadow-2xl border-2 border-purple-500 relative transform md:scale-105">
+                <div class="pricing-card bg-gray-800 text-white rounded-xl p-6 md:p-8 flex flex-col shadow-2xl border-2 border-purple-500 relative transform md:scale-105">
                     <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-purple-500 text-white text-sm font-bold px-4 py-1 rounded-full">MÁS POPULAR</div>
                     <h3 class="text-2xl font-bold text-center mb-4">PACK 3 MESES</h3>
                      <img src="renova3.jpg.png" alt="Pack 3 Meses Renova+" class="rounded-lg my-4 object-contain h-48 w-full">
@@ -345,13 +408,13 @@
                         <p class="text-green-400 font-semibold">¡Ahorras $21.000!</p>
                         <p class="text-gray-400">$47.990 por unidad</p>
                     </div>
-                    <a href="https://wa.me/56900000000?text=Hola%2C%20quiero%20comprar%20el%20Pack%203%20Meses%20de%20Renova%2B" target="_blank" class="mt-auto w-full text-center bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300">
+                    <a href="https://wa.me/56941607024?text=Hola%2C%20quiero%20comprar%20el%20Pack%203%20Meses%20de%20Renova%2B" target="_blank" class="mt-auto w-full text-center bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300">
                         COMPRAR 3 UNIDADES
                     </a>
                 </div>
 
                 <!-- Pack 2 -->
-                <div class="bg-gray-800 text-white rounded-xl p-6 md:p-8 flex flex-col shadow-lg border-2 border-transparent mt-8 md:mt-0">
+                <div class="pricing-card bg-gray-800 text-white rounded-xl p-6 md:p-8 flex flex-col shadow-lg border-2 border-transparent mt-8 md:mt-0">
                     <h3 class="text-2xl font-bold text-center mb-4">PACK 2 MESES</h3>
                     <img src="renova2.jpg.png" alt="Pack 2 Meses Renova+" class="rounded-lg my-4 object-contain h-48 w-full">
                     <p class="text-4xl md:text-5xl font-bold text-center my-4">$99.990</p>
@@ -359,7 +422,7 @@
                         <p class="text-green-400 font-semibold">¡Ahorras $9.990!</p>
                         <p class="text-gray-400">$49.995 por unidad</p>
                     </div>
-                     <a href="https://wa.me/56900000000?text=Hola%2C%20quiero%20comprar%20el%20Pack%202%20Meses%20de%20Renova%2B" target="_blank" class="mt-auto w-full text-center bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300">
+                     <a href="https://wa.me/56941687024?text=Hola%2C%20quiero%20comprar%20el%20Pack%202%20Meses%20de%20Renova%2B" target="_blank" class="mt-auto w-full text-center bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300">
                         COMPRAR 2 UNIDADES
                     </a>
                 </div>
@@ -370,15 +433,15 @@
         <section class="max-w-3xl mx-auto my-20">
             <h2 class="text-3xl font-bold text-center mb-10">Preguntas Frecuentes</h2>
             <div class="space-y-4">
-                <details class="bg-white/50 p-5 rounded-lg shadow-md">
+                <details class="faq-card bg-white/50 p-5 rounded-lg shadow-md">
                     <summary class="font-semibold text-lg">¿En cuánto tiempo veré resultados?</summary>
                     <p class="mt-3 text-gray-700">Aunque cada cuerpo es diferente, la mayoría de nuestras clientas reportan sentir más energía y ver mejoras en su piel y uñas a partir de la tercera o cuarta semana de uso continuo. ¡La constancia es clave!</p>
                 </details>
-                <details class="bg-white/50 p-5 rounded-lg shadow-md">
+                <details class="faq-card bg-white/50 p-5 rounded-lg shadow-md">
                     <summary class="font-semibold text-lg">¿Cómo se prepara y cuándo se toma?</summary>
                     <p class="mt-3 text-gray-700">Es muy simple: disuelve una cuchara dosificadora (incluida en el envase) en un vaso de 250 ml de agua. Puedes tomarlo en ayunas por la mañana para empezar el día con todo, o en cualquier otro momento que te acomode.</p>
                 </details>
-                <details class="bg-white/50 p-5 rounded-lg shadow-md">
+                <details class="faq-card bg-white/50 p-5 rounded-lg shadow-md">
                     <summary class="font-semibold text-lg">¿Tiene alguna contraindicación o efecto secundario?</summary>
                     <p class="mt-3 text-gray-700">Renova+ está elaborado con ingredientes de alta calidad y es seguro para la mayoría de los adultos. Sin embargo, si estás embarazada, lactando o tienes alguna condición médica preexistente, te recomendamos consultar con tu médico antes de consumirlo.</p>
                 </details>
@@ -410,7 +473,7 @@
     </footer>
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/56900000000?text=Hola%2C%20tengo%20una%20pregunta%20sobre%20Renova%2B" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/56941607024?text=Hola%2C%20tengo%20una%20pregunta%20sobre%20Renova%2B" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp my-float" style="margin-top: 15px;"></i>
     </a>
     
@@ -438,6 +501,17 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
 
 
 

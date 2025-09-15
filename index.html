@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FWP Distribuidor Autorizado - Inicio</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Estilos Personalizados -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #F8F9FA; /* Un fondo neutro y limpio */
+        }
+
+        /* Degradado personalizado para botones y acentos */
+        .fwp-gradient {
+            background-image: linear-gradient(to right, #8E2DE2 0%, #4A00E0  51%, #8E2DE2  100%);
+        }
+        
+        .fwp-gradient-text {
+            background-image: linear-gradient(to right, #8E2DE2 0%, #4A00E0 100%);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-text-fill-color: transparent;
+        }
+
+        .btn-grad {
+            transition: 0.5s;
+            background-size: 200% auto;
+        }
+        .btn-grad:hover {
+            background-position: right center;
+        }
+
+        /* Efecto de hover en las tarjetas de producto */
+        /* Tarjeta de producto con efecto hover + neón */
+        .product-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.4s ease;
+            overflow: hidden;
+            position: relative;
+            border-radius: 16px;
+        }
+
+        /* Hover general */
+        .product-card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 0 35px var(--glow-color, rgba(255,255,255,0.3));
+        }
+
+        /* Imagen con zoom */
+        .product-card .img-container {
+             overflow: hidden; /* Asegura que la imagen no se salga del contenedor */
+             border-radius: 10px 10px 0 0; /* Coincide con el radio de la tarjeta */
+        }
+        .product-card img {
+            transition: transform 0.4s ease;
+        }
+        .product-card:hover img {
+            transform: scale(1.1);
+        }
+
+        /* --- EFECTO NEÓN ANIMADO --- */
+        .product-card::before {
+            content: "";
+            position: absolute;
+            inset: -4px; /* borde externo */
+            border-radius: 20px;
+            background: var(--glow-color, rgba(255,255,255,0.4));
+            filter: blur(25px);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .product-card:hover::before {
+            opacity: 1;
+            animation: neonPulse 1.5s infinite alternate;
+        }
+
+        @keyframes neonPulse {
+            0%   { opacity: 0.6; filter: blur(15px); box-shadow: 0 0 10px var(--glow-color); }
+            50%  { opacity: 1; filter: blur(25px); box-shadow: 0 0 30px var(--glow-color); }
+            100% { opacity: 0.7; filter: blur(20px); box-shadow: 0 0 15px var(--glow-color); }
+        }
+
+        /* Fondos dinámicos con degradado */
+        .product-card.purple:hover {
+            background: linear-gradient(135deg, #6B21A8, #9333EA);
+        }
+        .product-card.green:hover {
+            background: linear-gradient(135deg, #065F46, #10B981);
+        }
+        .product-card.orange:hover {
+            background: linear-gradient(135deg, #9A3412, #F97316);
+        }
+        
+        /* Botones "Ver Más" de productos */
+        .btn-vermas {
+            display: inline-block;
+            padding: 10px 20px;
+            font-weight: bold;
+            color: #fff;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        .btn-renova {
+            background: linear-gradient(45deg, #8E2DE2, #DA22FF);
+        }
+        .btn-renova:hover {
+            background: linear-gradient(45deg, #DA22FF, #8E2DE2);
+            transform: scale(1.05);
+        }
+
+        .btn-24burn {
+            background: linear-gradient(45deg, #00FF7F, #32CD32);
+        }
+        .btn-24burn:hover {
+            background: linear-gradient(45deg, #32CD32, #00FF7F);
+            transform: scale(1.05);
+        }
+
+        .btn-eboost {
+            background: linear-gradient(45deg, #FF9800, #FF5722);
+        }
+        .btn-eboost:hover {
+            background: linear-gradient(45deg, #FF5722, #FF9800);
+            transform: scale(1.05);
+        }
+
+        /* Estilos para la sección de testimonios eliminados ya que se usan clases de Tailwind */
+
+        /* Animación para el menú móvil */
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header y Menú de Navegación -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="text-2xl font-bold bg-gradient-to-r from-[#8E2DE2] via-[#24D06C] to-[#FF8C42] bg-clip-text text-transparent">
+                FWP Energía natural
+            </a>
+            
+            <!-- Menú para Escritorio -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#" class="text-gray-600 hover:text-purple-700 font-medium">Inicio</a>
+                <a href="#productos" class="text-gray-600 hover:text-purple-700 font-medium">Productos</a>
+                <a href="#" class="text-gray-600 hover:text-purple-700 font-medium">Sobre nosotros</a>
+                <a href="#" class="text-gray-600 hover:text-purple-700 font-medium">Contacto</a>
+            </div>
+            
+            <!-- Botón de Menú Móvil (Hamburguesa) -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Menú desplegable para Móvil -->
+        <div id="mobile-menu" class="md:hidden bg-white border-t border-gray-200 absolute w-full -translate-y-[150%]">
+            <a href="#" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-50 hover:text-purple-700">Inicio</a>
+            <a href="#productos" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-50 hover:text-purple-700">Productos</a>
+            <a href="#" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-50 hover:text-purple-700">Sobre nosotros</a>
+            <a href="#" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-50 hover:text-purple-700">Contacto</a>
+        </div>
+    </header>
+
+    <!-- Sección Principal (Hero) -->
+    <main>
+        <section class="bg-white">
+            <div class="container mx-auto px-6 py-20 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">
+                    Bienestar y Energía <span class="fwp-gradient-text">Para Tu Día a Día</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+                    Descubre la línea de productos FWP diseñados para potenciar tu salud, belleza y vitalidad desde el interior.
+                </p>
+                <a href="#productos" class="btn-grad fwp-gradient text-white font-bold text-lg py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-transform duration-300 inline-block">
+                    Ver Productos
+                </a>
+            </div>
+        </section>
+
+        <!-- Sección de Productos -->
+        <section id="productos" class="py-20 bg-[#121828]">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12 text-white">Nuestros Productos Destacados</h2>
+                
+                <!-- Grid de Productos -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    
+                    <!-- Tarjeta de Producto 1: Renova+ -->
+                    <div class="product-card purple bg-[#202940] rounded-xl overflow-hidden shadow-lg flex flex-col border-2 border-purple-500" style="--glow-color: rgba(168, 85, 247, 0.5);">
+                        <div class="p-8 flex justify-center items-center img-container">
+                            <img src="https://i.postimg.cc/zX8ASyC7/MOCKUP-POTE-CHILE.jpg" alt="Producto Renova Plus" class="h-64 object-contain">
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-bold mb-2 text-white">Renova Plus</h3>
+                            <p class="text-gray-300 mb-4 flex-grow">La dosis diaria de juventud con colágeno, Q10 y resveratrol para una piel, cabello y energía radiantes.</p>
+                            <a href="#" class="btn-vermas btn-renova">Ver Más</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Tarjeta de Producto 2: 24Burn -->
+                    <div class="product-card green bg-[#202940] rounded-xl overflow-hidden shadow-lg flex flex-col border-2 border-green-500" style="--glow-color: rgba(34, 197, 94, 0.5);">
+                        <div class="p-8 flex justify-center items-center img-container">
+                            <img src="https://i.postimg.cc/pXG7Vg0T/24BURN-CHILE.png" alt="Producto 24Burn" class="h-64 object-contain">
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-bold mb-2 text-white">24Burn</h3>
+                            <p class="text-gray-300 mb-4 flex-grow">Activa tu metabolismo y reduce medidas con la poderosa combinación de Té Verde, Panax Ginseng y L-Carnitina.</p>
+                            <a href="#" class="btn-vermas btn-24burn">Ver Más</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Tarjeta de Producto 3: E-Boost -->
+                    <div class="product-card orange bg-[#202940] rounded-xl overflow-hidden shadow-lg flex flex-col border-2 border-orange-500" style="--glow-color: rgba(249, 115, 22, 0.5);">
+                        <div class="p-8 flex justify-center items-center img-container">
+                           <img src="https://i.postimg.cc/L8y2z24q/CAJA-EBOOST-CHILE.jpg" alt="Producto E-Boost" class="h-64 object-contain">
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-bold mb-2 text-white">E-Boost</h3>
+                            <p class="text-gray-300 mb-4 flex-grow">El impulso de energía saludable que necesitas para eliminar la fatiga y mejorar tu enfoque y concentración.</p>
+                            <a href="#" class="btn-vermas btn-eboost">Ver Más</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Testimonios -->
+        <section id="testimonios" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-24 text-gray-800">Lo Que Dicen Nuestros Clientes</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Testimonio 1 -->
+                    <div class="group bg-white shadow-lg rounded-lg p-6 border-2 border-[#8E2DE2] transition duration-300 transform hover:scale-105 hover:border-[#a86efc] hover:shadow-2xl">
+                        <div class="flex justify-center -mt-14">
+                            <div class="w-20 h-20 flex items-center justify-center rounded-full border-4 border-white bg-gradient-to-r from-[#8E2DE2] to-[#a86efc] text-white font-bold text-3xl transition duration-300 group-hover:shadow-[0_0_20px_#a86efc]">
+                                DP
+                            </div>
+                        </div>
+                        <p class="text-center mt-4 text-gray-600 italic">"Desde que consumo Renöva+ me he sentido con mas vitalidad y con la energía suficiente para ser madre, pareja y empresaria."</p>
+                        <p class="text-center font-semibold text-gray-800 mt-2">- Daniela P.</p>
+                    </div>
+
+                    <!-- Testimonio 2 -->
+                    <div class="group bg-white shadow-lg rounded-lg p-6 border-2 border-[#34D399] transition duration-300 transform hover:scale-105 hover:border-[#6EE7B7] hover:shadow-2xl">
+                        <div class="flex justify-center -mt-14">
+                            <div class="w-20 h-20 flex items-center justify-center rounded-full border-4 border-white bg-[#34D399] text-white font-bold text-3xl transition duration-300 group-hover:shadow-[0_0_20px_#34D399]">
+                                SC
+                            </div>
+                        </div>
+                        <p class="text-center mt-4 text-gray-600 italic">"Como emprendedor, necesito estar enfocado por horas. eBoost me da esa claridad mental que buscaba, sin distracciones."</p>
+                        <p class="text-center font-semibold text-gray-800 mt-2">- Sebastián C.</p>
+                    </div>
+
+                    <!-- Testimonio 3 -->
+                    <div class="group bg-white shadow-lg rounded-lg p-6 border-2 border-[#F97316] transition duration-300 transform hover:scale-105 hover:border-[#fb923c] hover:shadow-2xl">
+                        <div class="flex justify-center -mt-14">
+                            <div class="w-20 h-20 flex items-center justify-center rounded-full border-4 border-white bg-[#F97316] text-white font-bold text-3xl transition duration-300 group-hover:shadow-[0_0_20px_#F97316]">
+                                NM
+                            </div>
+                        </div>
+                        <p class="text-center mt-4 text-gray-600 italic">"Desde que tomo eBoost mis mañanas son mucho más productivas. Tengo energía para todo el día y sin el nerviosismo del café."</p>
+                        <p class="text-center font-semibold text-gray-800 mt-2">- Nicolle M.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección CTA: Convierte Tu Bienestar en Libertad Financiera -->
+        <section class="py-16 sm:py-20 bg-white">
+          <div class="mx-auto max-w-5xl px-6 text-center">
+            <!-- Título -->
+            <h2 class="mx-auto max-w-4xl text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900">
+              Convierte Tu Bienestar en Libertad Financiera
+            </h2>
+        
+            <!-- Párrafo -->
+            <p class="mx-auto mt-5 max-w-3xl text-lg sm:text-xl leading-relaxed text-slate-600">
+              Lo que empezó como un cambio personal, ahora puede convertirse en una fuente de ingresos para ti.
+            </p>
+        
+            <!-- Botón con gradiente -->
+            <div class="mt-10">
+              <a href="#"
+                  aria-label="Quiero libertad ahora"
+                  class="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-indigo-600 to-fuchsia-600 px-7 py-4 text-base sm:text-lg font-semibold text-white shadow-lg transition-all duration-300 hover:opacity-95 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-fuchsia-200 active:scale-[0.99]">
+                QUIERO SER EMBAJADOR (RA)
+              </a>
+            </div>
+          </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy;  2025 FWP ENERGIA NATURAL. 
+                
+            <p> Innovacion en Bienestar, Comunidad y Resultados.</p>
+            <p class="text-sm text-gray-400 mt-2">Todos los derechos reservados. Los resultados individuales pueden variar. Los suplementos alimenticios no reemplazan una dieta balanceada.</p>
+        </div>
+    </footer>
+
+    <!-- Script para el menú móvil -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = mobileMenu.querySelectorAll('a');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('translate-y-0');
+            mobileMenu.classList.toggle('-translate-y-[150%]');
+        }
+
+        mobileMenuButton.addEventListener('click', toggleMenu);
+        
+        // Cierra el menú cuando se hace clic en un enlace
+        navLinks.forEach(link => {
+            link.addEventListener('click', toggleMenu);
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+
+

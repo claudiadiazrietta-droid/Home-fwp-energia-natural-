@@ -1,0 +1,478 @@
+
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>24Burn de FWP | Activa tu Metabolismo | Envío Gratis a todo Chile</title>
+    <meta name="description" content="Descubre 24Burn, la fórmula termogénica avanzada de FWP. Activa tu metabolismo, quema grasas y dispara tu energía de forma natural. ¡Oferta Exclusiva con envío gratis a todo Chile!">
+    <meta name="keywords" content="quemador de grasa, 24Burn, FWP, termogénico, bajar de peso, suplemento, Chile, envío gratis, energía, metabolismo, L-Carnitina">
+    <meta name="author" content="Súper Online Chile">
+    <meta property="og:title" content="24Burn | Activa tu Metabolismo 24/7" />
+    <meta property="og:description" content="El impulso que tu cuerpo necesita para quemar grasas y aumentar tu energía. ¡Pide tu 24Burn hoy con envío gratis a todo Chile!" />
+    <meta property="og:image" content="https://placehold.co/1200x630/a7d129/ffffff?text=24Burn" />
+    <meta property="og:url" content="https://www.superonlinechile.cl/24burn" /> <!-- Cambiar a tu URL real -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_CL" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* Custom Styles - Clean Green Theme for 24Burn */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f7f9f5; /* Very light green-gray background */
+            color: #333333; /* Dark gray text */
+        }
+
+        /* --- Dynamic Scrolling Banner --- */
+        .scrolling-banner {
+            background-image: linear-gradient(to right, #A7D129 0%, #8CC63F 51%, #A7D129 100%);
+            color: #ffffff;
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+        }
+        .scrolling-banner-content {
+            display: inline-block;
+            padding: 10px 0;
+            animation: scroll 20s linear infinite;
+        }
+        .scrolling-banner-content span {
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 0 40px;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        
+        /* --- Dynamic Card Animation --- */
+        .reveal-card {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .reveal-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- FAQ Accordion --- */
+        details {
+            background-color: #ffffff;
+        }
+        details > summary {
+            list-style: none;
+            cursor: pointer;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        details summary:after {
+            content: '+';
+            float: right;
+            font-size: 1.5em;
+            font-weight: bold;
+            transition: transform 0.3s;
+            color: #8CC63F;
+        }
+        details[open] summary:after {
+            transform: rotate(45deg);
+        }
+        
+        /* --- WhatsApp Floating Button --- */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 100;
+            transition: transform 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        /* Custom gradient for buttons */
+        .btn-grad {
+            background-image: linear-gradient(to right, #A7D129 0%, #8CC63F 51%, #A7D129 100%);
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+        }
+        .btn-grad:hover {
+            background-position: right center;
+        }
+
+        .text-grad {
+            background-image: linear-gradient(to right, #A7D129 0%, #8CC63F 51%, #A7D129 100%);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-text-fill-color: transparent;
+        }
+
+        /* Card Hover Effects */
+        .benefit-card:hover, .ingredient-card:hover, .product-image-card:hover, 
+        .testimonial-card:hover, .freedom-card:hover, .pricing-card:hover, .faq-card:hover {
+            transform: scale(1.05);
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(167, 209, 41, 0.5);
+        }
+
+        /* --- Payment Logos --- */
+        .payment-logos-container {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .payment-logo-item {
+            position: relative;
+        }
+        .payment-logo-item img {
+            width: 70px;
+            filter: grayscale(100%);
+            transition: all 0.3s ease;
+        }
+        .payment-logo-item .tooltip {
+            position: absolute;
+            bottom: -28px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 12px;
+            background: #333;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 6px;
+            opacity: 0;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            pointer-events: none;
+        }
+        .payment-logo-item:hover img {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+        .payment-logo-item:hover .tooltip {
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Scrolling Banner -->
+    <div class="scrolling-banner">
+        <div class="scrolling-banner-content">
+            <span>🚚 ENVÍO GRATIS A TODO CHILE 🚚</span>
+            <span>ENVÍO GRATIS A TODO CHILE</span>
+            <span>🚚 ENVÍO GRATIS A TODO CHILE 🚚</span>
+            <span>ENVÍO GRATIS A TODO CHILE</span>
+            <span>🚚 ENVÍO GRATIS A TODO CHILE 🚚</span>
+            <span>ENVÍO GRATIS A TODO CHILE</span>
+            <span>🚚 ENVÍO GRATIS A TODO CHILE 🚚</span>
+            <span>ENVÍO GRATIS A TODO CHILE</span>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-6 py-12">
+
+        <!-- Hero Section -->
+        <header class="text-center mb-16">
+            <p class="text-lg font-semibold uppercase tracking-wider text-grad mb-4">Un impulso natural para tu cambio</p>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-normal">
+                <span class="block" style="color: #2c3e50;">¿Sientes que te Falta </span>
+                <span class="block" style="color: #5a7d00;">Energía para tus Actividades Diarias?</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">Descubre 24Burn, la fórmula termogénica que trabaja contigo. Diseñado para potenciar tu metabolismo, quemar grasas y darte la energía que necesitas para conquistar tu día.</p>
+            <div class="mt-8 flex justify-center">
+                <!-- Product Image -->
+                <img src="24burnsolo.png" alt="Envase de 24Burn de FWP" class="product-image-card rounded-lg shadow-2xl w-full max-w-sm">
+            </div>
+            <div class="mt-10">
+                <a href="https://wa.me/56941687024?text=Hola%20Claudia%2C%20quiero%20comprar%2024Burn%20con%20la%20oferta%20de%20env%C3%ADo%20gratis%21" target="_blank" class="btn-grad font-bold text-2xl py-4 px-10 rounded-full shadow-lg transform hover:scale-105 transition-transform duration-300 inline-block">
+                    ¡QUIERO MI 24BURN AHORA!
+                </a>
+            </div>
+        </header>
+
+        <!-- Benefits Section -->
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-10">¿Por Qué 24Burn Es El Impulso Que Necesitas?</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="benefit-card bg-white p-6 rounded-xl shadow-lg">
+                    <div class="text-4xl text-[#A7D129] mb-3">🎯</div>
+                    <h3 class="text-xl font-semibold mb-2">RESULTADO SOÑADO</h3>
+                    <p>Imagina sentirte más ligero/a, con energía de sobra y ver cómo tu cuerpo se transforma día a día. 24Burn es tu aliado para lograr esa meta.</p>
+                </div>
+                <div class="benefit-card bg-white p-6 rounded-xl shadow-lg">
+                    <div class="text-4xl text-[#A7D129] mb-3">✅</div>
+                    <h3 class="text-xl font-semibold mb-2">PROBABILIDAD DE LOGRO</h3>
+                    <p>Con una fórmula sinérgica de ingredientes naturales probados, los resultados no son una casualidad, son una consecuencia.</p>
+                </div>
+                <div class="benefit-card bg-white p-6 rounded-xl shadow-lg">
+                     <div class="text-4xl text-[#A7D129] mb-3">⏱️</div>
+                    <h3 class="text-xl font-semibold mb-2">TIEMPO Y ESFUERZO</h3>
+                    <p>Olvídate de soluciones mágicas que no funcionan. Una cápsula al día es el complemento perfecto para tu rutina. ¡Simple y efectivo!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ingredients Section -->
+        <section id="ingredients" class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-10">Ingredientes Naturales, Poder Real</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <!-- Ingrediente 1 -->
+                <div class="reveal-card ingredient-card text-center bg-white p-4 rounded-xl shadow-md">
+                    <div class="text-5xl mb-3">🍃</div>
+                    <h4 class="font-bold">Té Verde</h4>
+                    <p class="text-sm">Acelera tu metabolismo de forma natural.</p>
+                </div>
+                <!-- Ingrediente 4 -->
+                <div class="reveal-card ingredient-card text-center bg-white p-4 rounded-xl shadow-md">
+                    <div class="text-5xl mb-3">💪</div>
+                    <h4 class="font-bold">L-Carnitina</h4>
+                    <p class="text-sm">Transporta los ácidos grasos para convertirlos en energía.</p>
+                </div>
+                <!-- Ingrediente Panax Ginseng -->
+                <div class="reveal-card ingredient-card text-center bg-white p-4 rounded-xl shadow-md">
+                    <div class="text-5xl mb-3 flex justify-center items-center h-12">
+                        <svg width="48" height="48" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M50,10 C55,20 60,35 50,45 C40,55 45,70 40,80 M50,45 C55,55 50,70 55,85 M50,45 C45,55 40,65 35,80 M40,80 L38,90 M55,85 L57,95 M35,80 L33,90" stroke="#c7a46e" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M50,10 C48,8 52,8 50,6 Q48,4 50,2" stroke="#8b5a2b" stroke-width="4" fill="none" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h4 class="font-bold">Panax Ginseng</h4>
+                    <p class="text-sm">Contribuye a regular los niveles de azúcar y la ansiedad.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-10">¡Ellos Ya Encendieron Su Metabolismo!</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonio 1 -->
+                <div class="reveal-card testimonial-card bg-white p-6 rounded-xl shadow-lg">
+                    <img src="coty24burn.jpg" alt="Testimonio de Marcela G." class="w-24 h-24 rounded-full mx-auto -mt-12 border-4 border-white">
+                    <p class="text-gray-600 mt-4">"Desde que empecé con 24Burn, mis niveles de energía están por las nubes. Me siento activa todo el día y ya he notado cambios en mi ropa. ¡Es increíble!"</p>
+                    <p class="text-right font-bold mt-4">- Constanza C., 27, Santiago</p>
+                </div>
+                 <!-- Testimonio 2 -->
+                <div class="reveal-card testimonial-card bg-white p-6 rounded-xl shadow-lg">
+                    <img src="24burnjavier.jpg" alt="Testimonio de Felipe R." class="w-24 h-24 rounded-full mx-auto -mt-12 border-4 border-white">
+                    <p class="text-gray-600 mt-4">"Lo probe porque buscaba algo natural. Me dio energia sin nerviosismo y en dos meses baje de talla. ¡Totalmente recomendado!"</p>
+                    <p class="text-right font-bold mt-4">- Javier P., 30, Santiago</p>
+                </div>
+                 <!-- Testimonio 3 -->
+                <div class="reveal-card testimonial-card bg-white p-6 rounded-xl shadow-lg">
+                    <img src="cami24burn.jpg" alt="Testimonio de Daniela V." class="w-24 h-24 rounded-full mx-auto -mt-12 border-4 border-white">
+                    <p class="text-gray-600 mt-4">"Lo que más me gustó fue que me quitó la ansiedad por comer cosas dulces en la tarde. Me siento con más control y con mucha más energía."</p>
+                    <p class="text-right font-bold mt-4">- Camila P., 33, Coquimbo</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Pricing Section -->
+        <section class="my-20">
+            <div class="text-center mb-12 px-4">
+                <h2 class="text-3xl md:text-4xl font-extrabold" style="color: #6A8A0A;">Elige Tu Pack de Transformación</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto mt-4">Más meses de 24Burn significan más ahorro y resultados más potentes. Comprométete con tu meta y elige el plan perfecto para ti.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
+                <!-- Pack 1 -->
+                <div class="pricing-card bg-gray-800 text-white rounded-xl p-6 md:p-8 flex flex-col shadow-lg border-2 border-transparent">
+                    <h3 class="text-2xl font-bold text-center mb-4">Pack Inicio</h3>
+                    <img src="24burn1.jpg.png" alt="Pack Inicio 24Burn 1 mes" class="rounded-lg my-4 object-contain h-48 w-full">
+                    <p class="text-4xl md:text-5xl font-bold text-center my-4">$37.900</p>
+                    <ul class="text-left my-6 space-y-4 min-h-[110px]">
+                        <li class="flex items-center">
+                            <i class="fas fa-truck text-green-400 mr-3 fa-flip-horizontal"></i>
+                            <span>ENVÍO GRATIS a todo Chile</span>
+                        </li>
+                    </ul>
+                    <a href="https://mpago.la/288sf4Q" target="_blank" class="mt-auto w-full text-center btn-grad text-white font-bold py-3 px-6 rounded-lg whitespace-nowrap">
+                        COMPRAR 1 UNIDAD
+                    </a>
+                </div>
+
+                <!-- Pack 2 -->
+                <div class="pricing-card bg-gray-800 text-white rounded-xl p-6 md:p-8 flex flex-col shadow-lg border-2 border-transparent">
+                    <h3 class="text-2xl font-bold text-center mb-4">PACK 2 MESES</h3>
+                    <img src="24burn02.jpg.png" alt="Pack 2 Meses 24Burn" class="rounded-lg my-4 object-contain h-48 w-full">
+                    <p class="text-4xl md:text-5xl font-bold text-center my-4">$75.800</p>
+                     <ul class="text-left my-6 space-y-4 min-h-[110px]">
+                        <li class="flex items-center">
+                           <i class="fas fa-truck text-green-400 mr-3 fa-flip-horizontal"></i>
+                            <span>ENVÍO GRATIS a todo Chile</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-star text-green-400 mr-3"></i>
+                            <span>Acceso a la Comunidad VIP</span>
+                        </li>
+                    </ul>
+                    <a href="https://mpago.la/2mRTVZt" target="_blank" class="mt-auto w-full text-center btn-grad text-white font-bold py-3 px-6 rounded-lg whitespace-nowrap">
+                        COMPRAR 2 UNIDADES
+                    </a>
+                </div>
+
+                <!-- Pack 3 (Most Popular) -->
+                <div class="pricing-card bg-gray-800 text-white rounded-xl p-6 md:p-8 flex flex-col shadow-2xl border-2 border-[#A7D129] relative transform md:scale-105 mt-8 md:mt-0">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#A7D129] text-gray-800 text-sm font-bold px-4 py-1 rounded-full">MÁS POPULAR</div>
+                    <h3 class="text-2xl font-bold text-center mb-4">PACK 3 MESES</h3>
+                    <img src="24burn03.jpg.png" alt="Pack 3 Meses 24Burn" class="rounded-lg my-4 object-contain h-48 w-full">
+                    <p class="text-4xl md:text-5xl font-bold text-center my-4">$113.700</p>
+                    <ul class="text-left my-6 space-y-4 min-h-[110px]">
+                        <li class="flex items-center">
+                            <i class="fas fa-truck text-green-400 mr-3 fa-flip-horizontal"></i>
+                            <span>ENVÍO GRATIS a todo Chile</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-star text-green-400 mr-3"></i>
+                            <span>Acceso a la Comunidad VIP</span>
+                        </li>
+                    </ul>
+                    <a href="https://mpago.la/1VPoNNh" target="_blank" class="mt-auto w-full text-center btn-grad text-white font-bold py-3 px-6 rounded-lg whitespace-nowrap">
+                        COMPRAR 3 UNIDADES
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="max-w-3xl mx-auto my-20">
+            <h2 class="text-3xl font-bold text-center mb-10">Preguntas Frecuentes</h2>
+            <div class="space-y-4">
+                <details class="faq-card p-5 rounded-lg shadow-md">
+                    <summary class="font-semibold text-lg">¿Cómo se toma 24Burn?</summary>
+                    <p class="mt-3 text-gray-700">Se recomienda disolver un scoop (15g) en 200 ml de agua tibia o fría, idealmente por la mañana para activar tu metabolismo durante todo el día. Tiene un delicioso y refrescante sabor a Té Limón.</p>
+                </details>
+                <details class="faq-card p-5 rounded-lg shadow-md">
+                    <summary class="font-semibold text-lg">¿En cuánto tiempo veré resultados?</summary>
+                    <p class="mt-3 text-gray-700">La mayoría de nuestros clientes sienten un aumento de energía desde los primeros días. Los cambios visibles en la composición corporal suelen notarse a partir de la tercera o cuarta semana, siempre que se combine con un estilo de vida saludable.</p>
+                </details>
+                <details class="faq-card p-5 rounded-lg shadow-md">
+                    <summary class="font-semibold text-lg">¿Tiene "efecto rebote"?</summary>
+                    <p class="mt-3 text-gray-700">No. 24Burn está diseñado con ingredientes naturales que trabajan en sinergia con tu cuerpo para optimizar el metabolismo. Al no ser un medicamento ni una dieta restrictiva, no genera efecto rebote. Los resultados se mantienen si continúas con hábitos saludables.</p>
+                </details>
+                <details class="faq-card p-5 rounded-lg shadow-md">
+                    <summary class="font-semibold text-lg">¿Necesito hacer dieta y ejercicio?</summary>
+                    <p class="mt-3 text-gray-700">24Burn es una herramienta poderosa para potenciar tus resultados. Para un cambio realmente transformador, recomendamos combinarlo con una alimentación balanceada y actividad física regular. El producto potenciará los efectos de tu esfuerzo.</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- Disclaimer Section -->
+        <section class="max-w-3xl mx-auto my-20 px-4">
+            <div class="bg-[#f0f9e8] border-2 border-[#A7D129] rounded-xl p-6 text-center">
+                <h3 class="font-bold text-lg mb-4" style="color: #6A8A0A;">INFORMACIÓN IMPORTANTE: SUPLEMENTO ALIMENTARIO</h3>
+                <p class="text-sm text-gray-700 mb-2">
+                    "Su uso no es recomendable para consumo por menores de 8 años, embarazadas y nodrizas, salvo indicación profesional competente y no reemplaza a una alimentación balanceada."
+                </p>
+                <p class="text-sm text-gray-700">
+                    Este producto no pretende diagnosticar, tratar, curar o prevenir ninguna enfermedad.
+                </p>
+            </div>
+        </section>
+
+    </div>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center p-4">
+        <div class="py-6">
+            <h4 class="text-sm font-semibold mb-6 uppercase tracking-wider text-gray-400">Pagos 100% Seguros</h4>
+            <div class="payment-logos-container">
+                <!-- Mercado Pago -->
+                <div class="payment-logo-item">
+                    <img src="mercadopago.jpg.png" alt="Mercado Pago">
+                    <span class="tooltip">Mercado Pago</span>
+                </div>
+                <!-- Visa -->
+                <div class="payment-logo-item">
+                    <img src="visa.jpg.png" alt="Visa">
+                    <span class="tooltip">Visa</span>
+                </div>
+                <!-- Mastercard -->
+                <div class="payment-logo-item">
+                    <img src="mastercard.jpg.png" alt="Mastercard">
+                    <span class="tooltip">Mastercard</span>
+                </div>
+            </div>
+        </div>
+        <p>&copy; 2025 FWP Energia Natural. 
+            
+         <p>Todos los derechos reservados</p>
+        
+        <p class="text-sm">Los suplementos alimenticios son una herramienta para complementar tu estilo de vida.</p>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/56941687024?text=Hola%2C%20tengo%20una%20pregunta%20sobre%2024Burn" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp my-float" style="margin-top: 15px;"></i>
+    </a>
+    
+    <script>
+        // JavaScript for reveal on scroll animation
+        document.addEventListener("DOMContentLoaded", function() {
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            const cards = document.querySelectorAll('.reveal-card');
+            cards.forEach((card, index) => {
+                card.style.transitionDelay = `${index * 100}ms`;
+                observer.observe(card);
+            });
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
